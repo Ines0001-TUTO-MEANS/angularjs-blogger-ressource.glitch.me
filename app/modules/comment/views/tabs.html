@@ -1,0 +1,6 @@
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" ng-repeat="tab in tabs">  
+    <a class="nav-link" ng-class="{active:tab.selected}" data-toggle="tab" data-target="#{{tab.title}}" role="tab" aria-controls="{{tab.title}}" aria-selected="{{tab.selected}}" >{{tab.number}} {{tab.title}}(s)</a>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent" ng-transclude></div>

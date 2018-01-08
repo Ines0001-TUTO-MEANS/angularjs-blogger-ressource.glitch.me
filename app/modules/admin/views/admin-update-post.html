@@ -1,0 +1,16 @@
+<div class="content" ng-cloak >
+  <div class="container">
+    <div ng-show="!isDisplayed()">
+      <div ng-include="'/modules/common/views/alert-page.html'"></div>
+      
+    </div>
+    <div class="row" ng-show="isDisplayed()">
+      <form name="postForm" ng-submit="postForm.$valid && updatePost()" novalidate>
+          <div ng-include="'/modules/admin/views/_forms.html'" ng-cloak></div>
+      </form>
+      
+      
+    
+    </div>
+  </div>
+</div>

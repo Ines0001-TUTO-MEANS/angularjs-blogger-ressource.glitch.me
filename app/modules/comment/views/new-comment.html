@@ -1,0 +1,14 @@
+    
+<div class="container-fluid">
+ <form name="commentForm" ng-submit="commentForm.$valid && newComment()" novalidate ng-controller="CommentNewController">
+
+
+    <h4>Add Comment</h4>
+      <textarea ng-model="comment.body" cols="30" rows="10" required></textarea>
+    <label for="">by:</label>
+      <input type="text" ng-model="comment.author" required placeholder="Name"/>
+
+      <button type="submit" class="btn btn-success" ng-disabled="commentForm.$invalid">{{buttonText}}</button>
+  </form>
+</div>
+

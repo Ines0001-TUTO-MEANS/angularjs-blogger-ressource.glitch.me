@@ -1,0 +1,13 @@
+
+<h2>Title<i class="pointer fa fa-trash push-right" aria-hidden="true" ng-click="deletePost(post)"></i></h2>
+<h2>
+  <input type="text" ng-model="post.title" placeholder="title"/>
+</h2>
+<h2>Body</h2>
+<textarea ng-model="post.content" rows="10" placeholder="content"></textarea>
+<label for="">Featured Image URL</label>
+<input type="text" ng-model="post.image" placeholder="http://placekitten.com/g/2000/600" />
+<label for="">by:</label>
+<input type="text" ng-model="post._createdby" placeholder="Author Name" required/>
+
+<button type="submit" class="btn btn-success" ng-disabled="postForm.$invalid">{{buttonText}}</button>

@@ -1,0 +1,10 @@
+<div class="container-fluid">
+  
+  <ul>
+     <li ng-repeat="message in post.messages">
+       "{{message.body}}"
+       <cite>- <b>{{message.user[0].firstname}}</b> on {{message._created | date}} </cite>
+       <!--button class="fa fa-heart" ng-click="(message.likes=message.likes+1) && updateMessageLike(message)"> {{message.likes}}</button-->
+     </li>
+  </ul>
+</div>

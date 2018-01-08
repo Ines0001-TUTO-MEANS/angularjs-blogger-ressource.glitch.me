@@ -1,0 +1,18 @@
+<div class="content">
+  <div class="container">
+    <div class="row">
+        <ul class="post-grid">
+          <li ng-click="editPost(post)" ng-repeat="post in posts | orderBy: '_id'" class="col-s-3" ng-class="{ 'reset-s' : $index%3==0 }" >
+            <h3>{{post.title}}</h3>
+            <p ng-bind-html="post.content | limitTo:70"></p>
+            <p class="fa fa-comment push-left"> {{post._children.messages || 0}}
+            </p>
+            
+            <p class="fa fa-heart push-right"> {{post.likes}}
+            </p>
+            
+          </li>
+        </ul>
+    </div>
+  </div>
+</div>
