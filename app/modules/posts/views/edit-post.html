@@ -1,0 +1,26 @@
+<div class="content" ng-cloak >
+  <div class="container">
+    <div ng-show="!isDisplayed()">
+      <div ng-include="'/modules/common/views/alert-page.html'"></div>
+    </div>
+    <div class="row" ng-show="isDisplayed()">
+      
+      <!-- Add directives tab-->
+      <ng-tabs>
+        <ng-tab title="article">
+          
+          <h2>{{post.title}}</h2>
+          <p ng-bind-html="post.content"></p>
+        </ng-tab>
+        <ng-tab title="commentaire" number="post.messages.length">
+          <div class="comments">
+            <!--button class="fa fa-heart" ng-click="post.likes = post.likes+1"> {{post.likes}}</button-->
+            
+            <div ng-include="'/modules/comment/views/new-comment.html'" ng-cloak></div>
+            <div ng-include="'/modules/comment/views/edit-comment.html'" ng-cloak></div>
+          </div>
+        </ng-tab>
+      </ng-tabs>
+    </div>
+  </div>
+</div>
